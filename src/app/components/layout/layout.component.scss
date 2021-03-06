@@ -1,0 +1,12 @@
+.wrapper {
+    >header {
+        display:block;
+        position:sticky;
+        .logo-wrapper{
+            border-bottom:solid 1px #ee7235;
+            img.logo {
+                height:auto;
+            }
+        }
+    }
+}

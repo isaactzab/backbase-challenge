@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+.icon {
+    &:before {
+        content:'';
+        width: 32px;
+        height: 32px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.briefcase {
+        &:before {
+            background-image: url('/assets/icons/briefcase.png');
+        }
+    }
+    &.arrows {
+        &:before {
+            background-image: url('/assets/icons/arrows.png');
+        }
+    }
+}
