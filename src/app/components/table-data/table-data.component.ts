@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-table-data',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TableDataComponent implements OnInit {
 
   constructor() { }
+  @Input() data: any;
 
   ngOnInit(): void {
   }

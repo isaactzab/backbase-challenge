@@ -1,1 +1,14 @@
-<p>table-data works!</p>
+<div class="table">
+    <div class="row" *ngFor="let row of data">
+        <div class="col">{{row?.dates.valueDate | date}}</div>
+        <div class="col logo" [ngClass]="row?.merchant.name | lowercase "></div>
+        <div class="col">
+            <div>{{ row?.merchant.name }}</div>
+            <div>{{ row?.transaction.creditDebitIndicator }}</div>
+        </div>
+        <div class="col">
+            {{ row?.transaction.amountCurrency.currencyCode }}
+            {{ row?.transaction.amountCurrency.amount }}
+        </div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
 <app-layout>
-    <aside><app-panel title="Make a transfer" icon="arrows">
+    <aside><app-panel title="Make a Transfer" icon="arrows">
         <app-transfer-form></app-transfer-form>
     </app-panel></aside>
     <section><app-panel title="Recent Transactions" icon="briefcase">
-        <app-table></app-table>
+        <app-table [data]="transactions"></app-table>
     </app-panel></section>
 </app-layout>
