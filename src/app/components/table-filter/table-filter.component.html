@@ -1,6 +1,6 @@
 <div class="filters">
     <div class="searchbox-wrapper">
-        <input type="text" placeholder="Search by typing"/>
+        <input type="text" placeholder="Search by typing" (keyup)="onSearchUpdate($event)"/>
     </div>
     <div class="sortby-wrapper">
         <div>
@@ -9,23 +9,23 @@
 
         <div class="button-group">
             <div class="radio-toggle toggle-button" >
-                <input type="radio" name="sortBy" value="dateASC" id="dateASC"/>
-                <input type="radio" name="sortBy" value="dateDSC" id="dateDSC"/>
+                <input type="radio" name="sortBy" (change)="onSortUpdate($event)" value="dateASC" id="dateASC"/>
+                <input type="radio" name="sortBy" (change)="onSortUpdate($event)" value="dateDSC" id="dateDSC"/>
     
                 <label for="dateASC" class="icon arrowDown">Date</label>
                 <label for="dateDSC" id="labelASC" class="icon arrowUp">Date</label>
 
             </div>
 
-            <input type="radio" name="sortBy" value="beneficiary" id="beneficiary"/>
+            <input type="radio" name="sortBy" (change)="onSortUpdate($event)" value="beneficiary" id="beneficiary"/>
             <label class="toggle-button" for="beneficiary">Beneficiary
             </label>
             
-            <input type="radio" name="sortBy" value="amount" id="amount"/>
+            <input type="radio" name="sortBy" (change)="onSortUpdate($event)" value="amount" id="amount"/>
             <label class="toggle-button" for="amount">Amount
             </label>
             
-            <input type="radio" name="sortBy" value="none" checked>
+            <!-- <input type="radio" name="sortBy" (change)="onSortUpdate($event)" value="none" checked> -->
         </div>
     </div>
     

@@ -26,7 +26,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     filter: grayscale(100%);
-
+    &-backbase {
+        background-image: url('/assets/icons/backbase.png');
+    }
     &-7-eleven {
         background-image: url('/assets/icons/7-eleven.png'); 
     }
@@ -48,7 +50,7 @@
     &-the-tea-lounge{
         background-image:url('/assets/icons/the-tea-lounge.png');
     }
-    &-hm-online-store{
+    &-h\&m-online-store{
         background-image:url('/assets/icons/h&m-online-store.png ');
     }
     &-whole-foods{

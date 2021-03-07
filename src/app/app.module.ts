@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -9,7 +11,6 @@ import { TransactionsComponent } from './pages/transactions/transactions.compone
 import { RecentTransactionsComponent } from './components/recent-transactions/recent-transactions.component';
 import { TableFilterComponent } from './components/table-filter/table-filter.component';
 import { TableDataComponent } from './components/table-data/table-data.component';
-import { TableComponent } from './components/table/table.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -26,16 +27,17 @@ import { ReplacePipe } from './pipes/replace.pipe';
     RecentTransactionsComponent,
     TableFilterComponent,
     TableDataComponent,
-    TableComponent,
     ReplacePipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
