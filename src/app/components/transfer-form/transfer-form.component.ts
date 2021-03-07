@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transfer-form.component.scss']
 })
 export class TransferFormComponent implements OnInit {
-
+  pattern = /^(\d+)\.(\d{2})/;
   constructor() { }
 
   ngOnInit(): void {

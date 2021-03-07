@@ -1,21 +1,32 @@
-<div>
-    <div>
+<div class="filters">
+    <div class="searchbox-wrapper">
         <input type="text" placeholder="Search by typing"/>
     </div>
-    <div>
-        <span>Sort by</span>
-        
-        <label>
-            Date
-            <input type="radio" name="sortBy" value="date"/><span></span></label>
-        
-        <label>Beneficiary
-            <input type="radio" name="sortBy" value="beneficiary"/>
-        </label>
-        
-        <label>Amount
-            <input type="radio" name="sortBy" value="amount"/>
-        </label>
+    <div class="sortby-wrapper">
+        <div>
+            <span>Sort by</span>
+        </div>
+
+        <div class="button-group">
+            <div class="radio-toggle toggle-button" >
+                <input type="radio" name="sortBy" value="dateASC" id="dateASC"/>
+                <input type="radio" name="sortBy" value="dateDSC" id="dateDSC"/>
+    
+                <label for="dateASC" class="icon arrowDown">Date</label>
+                <label for="dateDSC" id="labelASC" class="icon arrowUp">Date</label>
+
+            </div>
+
+            <input type="radio" name="sortBy" value="beneficiary" id="beneficiary"/>
+            <label class="toggle-button" for="beneficiary">Beneficiary
+            </label>
+            
+            <input type="radio" name="sortBy" value="amount" id="amount"/>
+            <label class="toggle-button" for="amount">Amount
+            </label>
+            
+            <input type="radio" name="sortBy" value="none" checked>
+        </div>
     </div>
     
 </div>

@@ -1,0 +1,30 @@
+.field {
+    display:flex;
+    flex-flow:column;
+    margin: 20px;
+    label {
+        font-weight: bold;
+        width:100%;
+    }
+    input{
+        display:block;
+        width:calc(100% - 20px);
+    }
+
+}
+
+
+.field-money{
+    position:relative;
+    &:before {
+        content:'$';
+        position:absolute;
+        top:0;
+        padding:10px;
+    }
+    input[type=number]{
+        padding-left:30px !important;
+        
+        width:calc(100% - 40px);
+    }
+}

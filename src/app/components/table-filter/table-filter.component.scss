@@ -1,0 +1,60 @@
+.filters, .filters>*, .filters>*>*{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    >* {
+        flex: 1 0 auto;
+    }
+}
+
+.sortby-wrapper {
+    >div>span{
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.button-group,
+.toggle-button,
+.radio-toggle>label {
+    border-color: #ccc;
+    border-style: solid;
+}
+.button-group{
+    border-width: 0px 0px 1px 1px;
+    >input[type=radio] {
+        display:none;
+        &:checked + .toggle-button {
+            background-color: var(--color-accent);
+            color:var(--color-text-contrast);
+            
+        }
+    }
+    .toggle-button, .radio-toggle>label {
+        display:block;
+        border-width: 1px 1px 0px 0px;
+        text-transform: uppercase;
+        padding:5px 10px;
+        text-align: center;
+        cursor:pointer;
+        &.radio-toggle {
+            padding:0px;
+        }
+    }
+
+    .radio-toggle{
+        input,
+        input:checked + input + label,
+        input:checked + label + label,
+        input:not(:checked) + input:not(:checked) + label + label{ 
+            display:none;
+        }
+        input:checked + input + label + label,
+        input:checked + label,
+        input:checked ~ label.icon:after { 
+            background-color: var(--color-accent);
+            color:var(--color-text-contrast);
+        }
+    }
+   
+}

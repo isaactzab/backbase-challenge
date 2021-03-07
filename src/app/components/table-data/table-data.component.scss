@@ -1,0 +1,57 @@
+.table {
+    display:flex;
+    flex-flow: column;
+    margin:20px;
+    border-width:1px 1px 1px 0px;
+    border-style: solid;
+    border-color:var(--color-border);
+    >.row {
+        width:100%;
+        display:flex;
+        >.col{
+            display:flex;
+            padding: 10px;
+        }
+    }
+}
+.categoryCode{
+    flex:0 0 auto;
+}
+
+.logo {
+    display:block!important;
+    width:20px;
+    height:20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: grayscale(100%);
+
+    &-7-eleven {
+        background-image: url('/assets/icons/7-eleven.png'); 
+    }
+    &-jerry-hildreth{
+        background-image:url('/assets/icons/jerry-hildreth.png');
+    }
+    &-amazon-online-store{
+        background-image:url('/assets/icons/amazon-online-store.png');
+    }
+    &-lawrence-pearson{
+        background-image:url('/assets/icons/lawrence-pearson.png');
+    }
+    &-southern-electric-company{
+        background-image:url('/assets/icons/southern-electric-company.png');
+    }
+    &-texaco{
+        background-image:url('/assets/icons/texaco.png');
+    }
+    &-the-tea-lounge{
+        background-image:url('/assets/icons/the-tea-lounge.png');
+    }
+    &-hm-online-store{
+        background-image:url('/assets/icons/h&m-online-store.png ');
+    }
+    &-whole-foods{
+        background-image:url('/assets/icons/whole-foods.png');
+    }
+}

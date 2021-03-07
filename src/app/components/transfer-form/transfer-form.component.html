@@ -1,18 +1,19 @@
 <form action="/signup" method="post">
-    <p>
-      <label>From Account</label><br>
+    <div class="field">
+      <label>From Account</label>
       <input type="text" name="fromAccount" aria-disabled="true" disabled="disabled" value="Free Checking(4692) - $5824.76"/>
-    </p>
-    <p>
-        <label>To Account</label><br>
+    </div>
+    <div class="field">
+        <label>To Account</label>
         <input type="text" name="toAccount" aria-disabled="true" disabled="disabled" value="Georgia Power Electric Company"/>
-    </p>
-    <p>
-      <label>Amount</label><br>
-      <input type="number" name="amount"/>
-    </p>
-    <p>
+    </div>
+    <div class="field">
+      <label>Amount</label>
+      <div class="field-money">
+        <input type="number" name="amount" step='0.01' value='0.00' placeholder="0.00"/>
+      </div>
+    </div>
+    <div class="field">
       <button>submit</button>
-      <button type="reset">Reset form</button>
-    </p>
+    </div>
   </form>

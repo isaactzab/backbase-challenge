@@ -14,6 +14,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ReplacePipe } from './pipes/replace.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     RecentTransactionsComponent,
     TableFilterComponent,
     TableDataComponent,
-    TableComponent
+    TableComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,

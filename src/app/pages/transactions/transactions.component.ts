@@ -8,17 +8,13 @@ import { Transaction } from '../../models/transaction';
   styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-
+  checkingNumber = '4692';
+  balance = 5824.76;
   constructor(
     private transactionService: TransactionsService
   ) { }
 
   transactions: Transaction[];
-
-  // transactions: any = [
-  //   { name: 'The Tea Lounge', amount: '-98'},
-  //   { name: 'Texaco', amount: '-12'}
-  // ];
 
   ngOnInit(): void {
     this.getTransactions();

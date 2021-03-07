@@ -1,16 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
+
+:root {
+    --color-accent:#ee7033;
+    --color-contrast:#0c8397;
+    --color-inactive:#cfcfcf;
+
+    --color-text-inactive:#cdcdcd;
+    --color-text-contrast:#fff;
+    
+    --color-border:#ccc;
+    --color-clear:#fff;
+
+    --app-background-image: url('/assets/background.jpg');
+}
+
 body {
     font-family: 'Kanit', sans-serif;
+    background-image:    var(--app-background-image);
+    background-size: auto;
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 .icon {
-    &:before {
+    &:before:not(.arrowUp):not(.arrowDown) {
         content:'';
         width: 32px;
         height: 32px;
         display: block;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    &:after{
+        font-size:.85rem;
+        color:#999;
     }
     &.briefcase {
         &:before {
@@ -21,5 +44,57 @@ body {
         &:before {
             background-image: url('/assets/icons/arrows.png');
         }
+    }
+    &.arrowUp {
+        &:after {
+            content:' \25B2'
+        }
+    }
+    &.arrowDown {
+        &:after {
+            content:' \25BC'
+        }
+    }
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+    background-color:transparent;
+    border-width:0px 0px 1px 0px;
+    border-color:#ccc;
+    padding:10px;
+    &:focus, &:active, &:target {
+        &:not([disabled]){
+            outline:none;
+            border-color:var(--color-border);
+        }
+    }
+}
+button {
+    padding:10px;
+    border-radius:3px;
+    border:none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:.8rem;
+    position:relative;
+    &:not([disabled]){
+        box-shadow: 0 8px 30px -4px rgba(0,0,0,.3);
+        color:var(--color-text-contrast);
+        background-color:var(--color-accent);
+        z-index:-0;
+        
+        cursor:pointer;
+        &:focus, &:active, &:target {
+            outline:none;
+        }
+        &:active {
+            transform: translateY(2px) scale(0.98);
+            box-shadow: 0 0 20px -4px rgba(0,0,0,.3);
+        }
+    }
+    
+    &[disabled]{
+        border-color:var(--color-inactive);
+        color:var(--color-text-inactive);
     }
 }
