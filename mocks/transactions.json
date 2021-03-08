@@ -1,5 +1,7 @@
 {
-  "transactions": [{
+  "transactions": [
+    {
+      "id": 1,
       "categoryCode": "#12a580",
       "dates": {
         "valueDate": 1600493600000
@@ -16,7 +18,9 @@
         "name": "Backbase",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 2,
       "categoryCode": "#12a580",
       "dates": {
         "valueDate": 1600387200000
@@ -33,7 +37,9 @@
         "name": "The Tea Lounge",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 3,
       "categoryCode": "#d51271",
       "dates": {
         "valueDate": "2020-09-19"
@@ -50,7 +56,9 @@
         "name": "Texaco",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 4,
       "categoryCode": "#12a580",
       "dates": {
         "valueDate": 1600300800000
@@ -67,7 +75,9 @@
         "name": "The Tea Lounge",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 5,
       "categoryCode": "#c12020",
       "dates": {
         "valueDate": 1600370800000
@@ -84,7 +94,9 @@
         "name": "Amazon Online Store",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 6,
       "categoryCode": "#c89616",
       "dates": {
         "valueDate": 1600214400000
@@ -101,7 +113,9 @@
         "name": "7-Eleven",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 7,
       "categoryCode": "#e25a2c",
       "dates": {
         "valueDate": 1476721442000
@@ -117,7 +131,9 @@
         "name": "H&M Online Store",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 8,
       "categoryCode": "#1180aa",
       "dates": {
         "valueDate": "2020-09-15"
@@ -134,7 +150,9 @@
         "name": "Jerry Hildreth",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 9,
       "categoryCode": "#1180aa",
       "dates": {
         "valueDate": 1600041600000
@@ -151,7 +169,9 @@
         "name": "Lawrence Pearson",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 10,
       "categoryCode": "#12a580",
       "dates": {
         "valueDate": 1599955200000
@@ -168,7 +188,9 @@
         "name": "Whole Foods",
         "accountNumber": "SI64397745065188826"
       }
-    }, {
+    },
+    {
+      "id": 11,
       "categoryCode": "#fbbb1b",
       "dates": {
         "valueDate": 1599868800000
@@ -185,6 +207,23 @@
         "name": "Southern Electric Company",
         "accountNumber": "SI64397745065188826"
       }
+    },
+    {
+      "merchant": {
+        "name": "Georgia Power Electric Company"
+      },
+      "categoryCode": "#fa0344",
+      "transaction": {
+        "creditDebitIndicator": "DBT",
+        "amountCurrency": {
+          "currencyCode": "EUR",
+          "amount": 1000
+        }
+      },
+      "dates": {
+        "valueDate": 1615164809
+      },
+      "id": 12
     }
   ]
 }
