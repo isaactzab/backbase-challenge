@@ -18,12 +18,24 @@
 body {
     font-family: 'Kanit', sans-serif;
     background-image:    var(--app-background-image);
-    background-size: auto;
+    background-size:cover;
     background-repeat:   no-repeat;
     background-position: center center;
+    background-attachment: fixed;
+
+    width:100vw;
+    height:100vh;
+}
+.container-layout {
+    width:75%;
+    // max-width:1300px;
+    margin:auto;
+}
+.container {
+    padding:10px;
 }
 .icon {
-    &:before:not(.arrowUp):not(.arrowDown) {
+    &:not(.arrowUp):not(.arrowDown):before{
         content:'';
         width: 32px;
         height: 32px;

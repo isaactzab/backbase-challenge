@@ -3,26 +3,16 @@
         display:block;
         height:88px;
         background-color:var(--color-clear);
-        border-bottom:solid 2px var(--color-accent);
+        border-bottom:solid 3px var(--color-accent);
         display:flex;
         align-items: center;
         // justify-content: center;
         .logo-wrapper{
-            width:85%;
-            max-width:1300px;
-            margin:auto;
             img {
-                margin-top:7px;
-                height:40px;
+                margin-top:0px;
+                height:42px;
             }
         }
     }
-    main{
-        display: grid;
-        grid-template-columns: 1fr 2.5fr;
-        grid-template-rows: 1fr;
-        gap: 0px 30px;
-        grid-template-areas:
-            ". .";
-    }
+    
 }

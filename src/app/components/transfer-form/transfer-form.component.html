@@ -1,19 +1,19 @@
-<form>
-    <div class="field">
-      <label>From Account</label>
-      <input type="text" name="FromAccount" aria-disabled="true" disabled="disabled" [value]="fromAccount"/>
+<div class="container">
+  <div class="field">
+    <label>From Account</label>
+    <input type="text" name="FromAccount" aria-disabled="true" disabled="disabled" [value]="fromAccount"/>
+  </div>
+  <div class="field">
+      <label>To Account</label>
+      <input type="text" name="ToAccount" aria-disabled="true" disabled="disabled" [(ngModel)]="ToAccount"/>
+  </div>
+  <div class="field">
+    <label>Amount</label>
+    <div class="field-money">
+      <input type="number" name="Amount" step='0.01' placeholder="0.00" [(ngModel)]="Amount"/>
     </div>
-    <div class="field">
-        <label>To Account</label>
-        <input type="text" name="ToAccount" aria-disabled="true" disabled="disabled" [(ngModel)]="ToAccount"/>
-    </div>
-    <div class="field">
-      <label>Amount</label>
-      <div class="field-money">
-        <input type="number" name="Amount" step='0.01' placeholder="0.00" [(ngModel)]="Amount"/>
-      </div>
-    </div>
-    <div class="field">
-      <button type="button" (click)="submitEvent()">submit</button>
-    </div>
-  </form>
+  </div>
+  <div class="field">
+    <button type="button" (click)="submitEvent()">submit</button>
+  </div>
+</div>

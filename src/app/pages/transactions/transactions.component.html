@@ -1,14 +1,16 @@
 <app-layout>
-    <aside><app-panel title="Make a Transfer" icon="arrows">
-        <app-transfer-form
+    <main class="container-layout">
+        <aside><app-panel h2="Make a Transfer" icon="arrows">
+            <app-transfer-form
             [fromAccount]="defaultFromAccount()"
             [toAccount]="defaultToAccount"
             [amount]="defaultAmount"
             (update)="onTransferFormSubmit($event)"
-        ></app-transfer-form>
-    </app-panel></aside>
-    <section><app-panel title="Recent Transactions" icon="briefcase">
-        <app-table-filter (filterUpdate)="onFilterUpdate($event)"></app-table-filter>
-        <app-table-data [data]="filteredTransactions()"></app-table-data>
-    </app-panel></section>
+            ></app-transfer-form>
+        </app-panel></aside>
+        <section><app-panel h1="Recent Transactions" icon="briefcase">
+            <app-table-filter (filterUpdate)="onFilterUpdate($event)"></app-table-filter>
+            <app-table-data [data]="filteredTransactions()"></app-table-data>
+        </app-panel></section>
+    </main>
 </app-layout>

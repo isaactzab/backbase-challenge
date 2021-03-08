@@ -1,13 +1,13 @@
 <div class="table">
     <div class="row" *ngFor="let row of data" >
         <div class="col categoryCode" [ngStyle]="{'backgroundColor': row?.categoryCode}"></div>
-        <div class="col">{{row?.dates.valueDate | date: 'MMM dd'}}</div>
-        <div class="col logo" [ngClass]="'logo-'+ row?.merchant.name | lowercase | replace: ' ': '-' "></div>
+        <div class="col col-md date">{{row?.dates.valueDate | date: 'MMM dd'}}</div>
+        <div class="col col-md logo" [ngClass]="'logo-'+ row?.merchant.name | lowercase | replace: ' ': '-' "></div>
         <div class="col">
             <div>{{ row?.merchant.name }}</div>
             <div>{{ row?.transaction.creditDebitIndicator }}</div>
         </div>
-        <div class="col">
+        <div class="col col-md">
             {{ row?.transaction.amountCurrency.currencyCode }}
             {{ row?.transaction.amountCurrency.amount }}
         </div>

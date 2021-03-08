@@ -1,9 +1,10 @@
 <div class="panel">
-    <header>
+    <header [ngClass]="{'h1': h1, 'h2': h2}" >
         <div [ngClass]="'icon ' + icon"></div>
-        <h1>{{ title }}</h1>
+        <h1 *ngIf="h1">{{ h1 }}</h1>
+        <h2 *ngIf="h2">{{ h2 }}</h2>
     </header>
-    <main>
+    <main class="container">
         <ng-content></ng-content>
     </main>
 </div>

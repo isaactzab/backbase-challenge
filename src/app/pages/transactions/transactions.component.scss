@@ -1,0 +1,9 @@
+main {
+    padding-top:70px;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 30px;
+    grid-template-areas:
+        ". .";
+}

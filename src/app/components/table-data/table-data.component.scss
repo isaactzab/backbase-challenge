@@ -1,7 +1,6 @@
 .table {
     display:flex;
     flex-flow: column;
-    margin:20px;
     border-width:1px 1px 1px 0px;
     border-style: solid;
     border-color:var(--color-border);
@@ -10,50 +9,63 @@
         display:flex;
         >.col{
             display:flex;
-            padding: 10px;
+            flex-flow: column;
+            // align-items: center;
+            justify-content: center;
+            height:60px;
+            flex: 1 1 auto;
+            &-sm {
+                flex: 0 0 70px !important;
+            }
+            &-md {
+                flex: 0 0 120px !important;
+            }
         }
     }
 }
 .categoryCode{
-    flex:0 0 auto;
+    flex:0 0 4px !important;
 }
-
 .logo {
-    display:block!important;
-    width:20px;
-    height:20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: grayscale(100%);
-    &-backbase {
+    flex:0 0 50px !important;
+    &:before{
+        content:'';
+        display:block;
+        width:32px;
+        height:32px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter: grayscale(100%);
+    }
+    &-backbase:before {
         background-image: url('/assets/icons/backbase.png');
     }
-    &-7-eleven {
+    &-7-eleven :before {
         background-image: url('/assets/icons/7-eleven.png'); 
     }
-    &-jerry-hildreth{
+    &-jerry-hildreth:before {
         background-image:url('/assets/icons/jerry-hildreth.png');
     }
-    &-amazon-online-store{
+    &-amazon-online-store:before {
         background-image:url('/assets/icons/amazon-online-store.png');
     }
-    &-lawrence-pearson{
+    &-lawrence-pearson:before {
         background-image:url('/assets/icons/lawrence-pearson.png');
     }
-    &-southern-electric-company{
+    &-southern-electric-company:before {
         background-image:url('/assets/icons/southern-electric-company.png');
     }
-    &-texaco{
+    &-texaco:before {
         background-image:url('/assets/icons/texaco.png');
     }
-    &-the-tea-lounge{
+    &-the-tea-lounge:before {
         background-image:url('/assets/icons/the-tea-lounge.png');
     }
-    &-h\&m-online-store{
+    &-h\&m-online-store:before {
         background-image:url('/assets/icons/h&m-online-store.png ');
     }
-    &-whole-foods{
+    &-whole-foods:before {
         background-image:url('/assets/icons/whole-foods.png');
     }
 }
