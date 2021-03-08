@@ -31,9 +31,7 @@ import * as API from '../../mock/transactions.json';
 
 export class TransactionsService {
   data: ITransaction[] = API.data as ITransaction[];
-  constructor() {
-    console.log(this.data);
-  }
+  constructor() {}
   getTransactions(): Observable<ITransaction[]> {
     return of(this.data);
   }

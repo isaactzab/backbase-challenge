@@ -20,7 +20,7 @@ export class TransactionsComponent implements OnInit {
   checkingNumber = '4692';
   balance = 5824.76;
   defaultToAccount = 'Georgia Power Electric Company';
-  defaultAmount = 1000.00;
+  defaultAmount = 0.00;
   transferFormState = false;
   defaultFromAccount = () => `Free Checking(${this.checkingNumber}) - $${this.balance}`;
 
@@ -28,6 +28,10 @@ export class TransactionsComponent implements OnInit {
   onTransferFormSubmit(data: ITransaction): void {
     if (data.transaction.amountCurrency.amount > this.balance + 500) {
       alert('Insufficient balance in that account to complete the transaction.');
+      return;
+    }
+    if(data.transaction.amountCurrency.amount === 0){
+      alert('Transfer amount must be greater than $0');
       return;
     }
     this.balance -= data.transaction.amountCurrency.amount;
@@ -50,7 +54,6 @@ export class TransactionsComponent implements OnInit {
 
     this.transferFormState = false;
     this.addTransaction(transaction as ITransaction);
-
   }
 
   filteredTransactions(): ITransaction[] {
@@ -74,7 +77,6 @@ export class TransactionsComponent implements OnInit {
       ? filtered.sort(sortFunctions[this.sortBy])
       : filtered;
 
-    console.log(sorted);
     return sorted;
   }
 

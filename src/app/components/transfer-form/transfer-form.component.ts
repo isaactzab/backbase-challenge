@@ -6,20 +6,21 @@ import { ITransaction } from '../../interface/transaction';
   templateUrl: './transfer-form.component.html',
   styleUrls: ['./transfer-form.component.scss']
 })
-export class TransferFormComponent {
-
-  ToAccount: string;
-
-  Amount: number;
-
-  @Input() fromAccount: string;
+export class TransferFormComponent{
 
   @Input() public set toAccount(toAccount: string){
     this.ToAccount = toAccount;
   }
   @Input() public set amount(amount: number){
-    this.Amount = amount;
+    
+    this.DefaultAmount = this.Amount = amount;
   }
+
+  ToAccount: string;
+  DefaultAmount: number;
+  Amount: number;
+
+  @Input() fromAccount: string;
   @Output() update: EventEmitter<any> = new EventEmitter();
 
   submitEvent(): void {
@@ -34,6 +35,6 @@ export class TransferFormComponent {
       }
     } as unknown as ITransaction;
     this.update.emit(transaction);
+    this.Amount = this.DefaultAmount;
   }
-
 }
