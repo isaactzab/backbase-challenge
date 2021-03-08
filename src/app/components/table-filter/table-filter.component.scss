@@ -21,7 +21,7 @@
     border-style: solid;
 }
 .button-group{
-    border-width: 0px 0px 1px 1px;
+    border-width: 1px 0px 1px 1px;
     >input[type=radio] {
         display:none;
         &:checked + .toggle-button {
@@ -32,7 +32,7 @@
     }
     .toggle-button, .radio-toggle>label {
         display:block;
-        border-width: 1px 1px 0px 0px;
+        border-width: 0px 1px 0px 0px;
         text-transform: uppercase;
         padding:5px 10px;
         text-align: center;
@@ -43,6 +43,9 @@
     }
 
     .radio-toggle{
+        label{
+            border:0px !important;
+        }
         input,
         input:checked + input + label,
         input:checked + label + label,
@@ -57,4 +60,29 @@
         }
     }
    
+}
+
+@media only screen and (max-width: 959px){
+    .filters{
+        flex-flow: column;
+        >div{
+            width:100%;
+            padding:10px 0px;
+        }
+    }
+    .searchbox-wrapper {
+        input {
+            display:block;
+            width:90%;
+        }
+    }
+    .sortby-wrapper {
+        >.label{
+            display:none;
+        }
+        overflow-x: auto;
+        label {
+            font-size: .85rem;
+        }
+    }
 }

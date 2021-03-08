@@ -1,11 +1,19 @@
 .app-layout {
+    &:before {
+        content: '';
+        display: block;
+        height:88px;
+    }
     >header {
-        display:block;
+        position:fixed;
+        top:0px;
+        width: 100%;
         height:88px;
         background-color:var(--color-clear);
-        border-bottom:solid 3px var(--color-accent);
+        border-bottom:solid 4px var(--color-accent);
         display:flex;
         align-items: center;
+        z-index:1;
         // justify-content: center;
         .logo-wrapper{
             img {
@@ -14,5 +22,22 @@
             }
         }
     }
-    
+}
+@media only screen and (max-width: 959px){
+    .app-layout{
+        &:before {
+            height:4rem;
+        }
+        >header{
+            height:3rem;
+            .logo-wrapper{
+                text-align: center;
+                img{
+                    height:auto;
+                    max-height:2.5rem;
+                    max-width:100%;
+                }
+            }
+        }
+    }
 }

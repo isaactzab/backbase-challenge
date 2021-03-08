@@ -22,8 +22,10 @@ export class TableFilterComponent implements OnInit {
   }
 
   onSearchUpdate(evt): void {
-    this.search = evt.target.value;
-    this.filterUpdate.emit({search: this.search, sortBy: this.sortBy});
+    if (evt.keycode !== 13 && evt.keycode !== 27) {
+      this.search = evt.target.value;
+      this.filterUpdate.emit({search: this.search, sortBy: this.sortBy});
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 <app-layout>
-    <main class="container-layout">
+    <main class="container-layout" [ngClass]="{'displayTransferForm':transferFormState}">
         <aside><app-panel h2="Make a Transfer" icon="arrows">
             <app-transfer-form
             [fromAccount]="defaultFromAccount()"
@@ -11,6 +11,7 @@
         <section><app-panel h1="Recent Transactions" icon="briefcase">
             <app-table-filter (filterUpdate)="onFilterUpdate($event)"></app-table-filter>
             <app-table-data [data]="filteredTransactions()"></app-table-data>
+            <button class="icon-plus" (click)="openTransferForm()">+</button>
         </app-panel></section>
     </main>
 </app-layout>

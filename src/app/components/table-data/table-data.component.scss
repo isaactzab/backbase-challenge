@@ -1,19 +1,23 @@
 .table {
     display:flex;
     flex-flow: column;
-    border-width:1px 1px 1px 0px;
+    border-width:1px 1px 0px 0px;
     border-style: solid;
     border-color:var(--color-border);
     >.row {
         width:100%;
         display:flex;
+        border-bottom:solid 1px var(--color-border);
         >.col{
             display:flex;
             flex-flow: column;
-            // align-items: center;
+            align-items: center;
             justify-content: center;
             height:60px;
             flex: 1 1 auto;
+            >*{
+                width: 100%;
+            }
             &-sm {
                 flex: 0 0 70px !important;
             }
@@ -24,7 +28,7 @@
     }
 }
 .categoryCode{
-    flex:0 0 4px !important;
+    flex:0 0 10px !important;
 }
 .logo {
     flex:0 0 50px !important;
@@ -37,11 +41,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         filter: grayscale(100%);
+        background-image: url('/assets/icons/placeholder.png');
     }
     &-backbase:before {
         background-image: url('/assets/icons/backbase.png');
     }
-    &-7-eleven :before {
+    &-7-eleven:before {
         background-image: url('/assets/icons/7-eleven.png'); 
     }
     &-jerry-hildreth:before {
@@ -67,5 +72,22 @@
     }
     &-whole-foods:before {
         background-image:url('/assets/icons/whole-foods.png');
+    }
+}
+
+@media only screen and (max-width: 959px){
+    .container {
+        >.table {
+            overflow-x: scroll;
+            >.row {
+                width:100%;
+                >.col{
+                    >*{
+                        white-space: nowrap;
+                        min-width:250px;
+                    }
+                }
+            }
+        }
     }
 }

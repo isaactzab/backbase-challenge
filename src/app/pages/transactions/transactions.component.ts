@@ -10,6 +10,10 @@ import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 })
 export class TransactionsComponent implements OnInit {
 
+  constructor(
+    private transactionService: TransactionsService
+  ) { }
+
   transactions: ITransaction[] = [];
   search: string;
   sortBy: string;
@@ -17,16 +21,12 @@ export class TransactionsComponent implements OnInit {
   balance = 5824.76;
   defaultToAccount = 'Georgia Power Electric Company';
   defaultAmount = 1000.00;
+  transferFormState = false;
   defaultFromAccount = () => `Free Checking(${this.checkingNumber}) - $${this.balance}`;
 
 
-  constructor(
-    private transactionService: TransactionsService
-  ) { }
-
-
   onTransferFormSubmit(data: ITransaction): void {
-    if (data.transaction.amountCurrency.amount > this.balance) {
+    if (data.transaction.amountCurrency.amount > this.balance + 500) {
       alert('Insufficient balance in that account to complete the transaction.');
       return;
     }
@@ -48,6 +48,7 @@ export class TransactionsComponent implements OnInit {
       }
     } as unknown;
 
+    this.transferFormState = false;
     this.addTransaction(transaction as ITransaction);
 
   }
@@ -96,5 +97,8 @@ export class TransactionsComponent implements OnInit {
   onFilterUpdate(filters: any): void {
     this.sortBy = filters.sortBy;
     this.search = filters.search;
+  }
+  openTransferForm(): void {
+    this.transferFormState = true;
   }
 }

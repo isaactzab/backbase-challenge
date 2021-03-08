@@ -17,22 +17,31 @@
 
 body {
     font-family: 'Kanit', sans-serif;
-    background-image:    var(--app-background-image);
-    background-size:cover;
+    background-image: var(--app-background-image);
+    background-size: cover ;
     background-repeat:   no-repeat;
-    background-position: center center;
+    background-position: bottom center;
     background-attachment: fixed;
 
     width:100vw;
     height:100vh;
 }
+
 .container-layout {
     width:75%;
     // max-width:1300px;
     margin:auto;
 }
+@media only screen and (max-width: 959px){
+    .container-layout {
+        width:90%;
+    }
+}
 .container {
     padding:10px;
+}
+.bold{
+    font-weight: bold;
 }
 .icon {
     &:not(.arrowUp):not(.arrowDown):before{
