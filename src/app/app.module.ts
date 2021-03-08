@@ -8,7 +8,6 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { TransferFormComponent } from './components/transfer-form/transfer-form.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { TransactionsComponent } from './pages/transactions/transactions.component';
-import { RecentTransactionsComponent } from './components/recent-transactions/recent-transactions.component';
 import { TableFilterComponent } from './components/table-filter/table-filter.component';
 import { TableDataComponent } from './components/table-data/table-data.component';
 import { StoreModule } from '@ngrx/store';
@@ -24,7 +23,6 @@ import { ReplacePipe } from './pipes/replace.pipe';
     TransferFormComponent,
     PanelComponent,
     TransactionsComponent,
-    RecentTransactionsComponent,
     TableFilterComponent,
     TableDataComponent,
     ReplacePipe
